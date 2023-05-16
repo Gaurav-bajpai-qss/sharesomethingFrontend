@@ -1,6 +1,6 @@
 import { ApolloClient, InMemoryCache } from "@apollo/client";
 
 export const client = new ApolloClient({
-  uri: "http://localhost:500/graphql",
+  uri: "https://sharesomething.onrender.com/graphql",
   cache: new InMemoryCache(),
 });
