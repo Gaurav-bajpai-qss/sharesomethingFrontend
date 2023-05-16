@@ -1,0 +1,319 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+$black: #000;
+$light: #fafafa;
+$primary: #f1dabf;
+$secondary: #92817a;
+$shadow1: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+$shadow2: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+$text: rgb(100, 100, 100);
+$yellow: rgb(255, 208, 0);
+
+.container {
+  width: 100%;
+
+  padding: 10px 100px;
+}
+@media (max-width: 900px) {
+  .container {
+    padding: 10px;
+  }
+}
+header {
+  width: 100%;
+
+  .wrap {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+
+    .left {
+      width: 20%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      h5 {
+        color: $primary;
+        font-size: 1.2rem;
+      }
+      .profile {
+        display: none;
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 50%;
+        cursor: pointer;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 50%;
+        }
+      }
+      .pop1 {
+        display: none;
+        background-color: $light;
+        box-shadow: $shadow1;
+        padding: 0.5rem;
+        width: 120px;
+        position: absolute;
+        top: 40px;
+        right: 10px;
+        ul {
+          li {
+            list-style: none;
+            font-size: 0.8rem;
+            color: $text;
+            border-radius: 5px;
+            padding: 0.5rem;
+          }
+          li:hover {
+            background: $primary;
+            color: $black;
+            cursor: pointer;
+          }
+        }
+      }
+      .active1 {
+        display: block;
+      }
+    }
+    .midle {
+      width: 60%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .searchBox {
+        width: 100%;
+        padding: 0.8rem 1rem;
+        border-radius: 10px;
+        background-color: $light;
+        display: flex;
+        input {
+          border: none;
+          background-color: transparent;
+          width: 100%;
+          height: 100%;
+          outline: none;
+          color: $text;
+        }
+        button {
+          border: none;
+          outline: none;
+          background-color: transparent;
+          i {
+            font-size: 1.3rem;
+            color: $primary;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+    .right {
+      width: 20%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      position: relative;
+      .profile {
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 50%;
+        cursor: pointer;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 50%;
+        }
+      }
+
+      .pop {
+        display: none;
+        background-color: $light;
+        box-shadow: $shadow1;
+        padding: 0.5rem;
+        width: 120px;
+        position: absolute;
+        top: 50px;
+        ul {
+          li {
+            list-style: none;
+            font-size: 0.8rem;
+            color: $text;
+            border-radius: 5px;
+            padding: 0.5rem;
+          }
+          li:hover {
+            background: $primary;
+            color: $black;
+            cursor: pointer;
+          }
+        }
+      }
+      .active {
+        display: block;
+      }
+    }
+  }
+  @media (max-width: 900px) {
+    .wrap {
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 10px;
+      .left {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        h5 {
+          font-size: 1rem;
+        }
+        .profile {
+          display: block;
+          width: 1.5rem;
+          height: 1.5rem;
+          border-radius: 10px;
+          img {
+            border-radius: 10px;
+          }
+        }
+      }
+      .midle {
+        width: 100%;
+        justify-content: flex-start;
+        margin-top: 0.5rem;
+      }
+      .right {
+        display: none;
+      }
+    }
+  }
+}
+
+.cat {
+  width: 100%;
+  h2 {
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: $black;
+  }
+  .category {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    padding-top: 1rem;
+    .card {
+      width: 4rem;
+      height: 4rem;
+      border: 1px solid $primary;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-radius: 5px;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 5px;
+      }
+    }
+    p {
+      font-size: 0.8rem;
+      text-align: center;
+      color: $text;
+    }
+  }
+}
+
+section.products {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 20px;
+  .productcard {
+    width: 200px;
+    height: 200px;
+    box-shadow: $shadow1;
+    background-color: $light;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+      position: absolute;
+      z-index: 1;
+      transition: 1.5s ease-in-out;
+    }
+    .heart {
+      width: 1.5rem;
+      height: 1.5rem;
+      border-radius: 50%;
+      background: rgba(0, 0, 0, 0.6);
+      color: $primary;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      z-index: 2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .top {
+      z-index: 2;
+      bottom: 0;
+      left: 0px;
+      position: absolute;
+      background: rgba(0, 0, 0, 0.6);
+      width: 100%;
+      padding: 0.5rem;
+      border-radius: 5px;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      h4 {
+        color: $light;
+        font-size: 0.8rem;
+        display: flex;
+        flex-direction: column;
+        span {
+          color: $yellow;
+          font-size: 0.5rem;
+        }
+      }
+      h5 {
+        color: $primary;
+        font-size: 1rem;
+      }
+    }
+  }
+  .productcard:hover img {
+    transform: scale(1.2);
+  }
+}
+@media (max-width: 600px) {
+  section.products {
+    justify-content: center;
+    .productcard {
+      width: 160px;
+      height: 160px;
+    }
+  }
+}
